@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: cloud-configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhangchanghai/cloud-config
+          searchPaths: '{application}'
+#  rabbitmq:
+#    host: localhost
+#    port: 15672
+#    username: admin
+#    password: 123456
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@localhost:8761/eureka/
